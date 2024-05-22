@@ -29,11 +29,11 @@ img {
   height: auto;
 }
 /* mobile first */
-/* @media screen and (min-width: 428px) and (max-width: 767px) { */
+
 .section {
   padding: 40px 0;
   margin: 0 auto;
-  max-width: 428px;
+  min-width: 320px;
 }
 /*Header section*/
 .nav-section {
@@ -42,7 +42,9 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 398px;
+  max-width: 378px;
+  min-width: 320px;
+  padding: 0 15px;
 }
 
 .logo .logo-link {
@@ -104,7 +106,7 @@ img {
 .button-close-nav {
   width: 20px;
   margin: 15px 0;
-  margin-left: 90%;
+  margin-left: 85%;
   border: none;
   background-color: var(--white-color);
   font-size: 20px;
@@ -246,12 +248,12 @@ img {
   transform: translate(-50%, -50%) scale(0);
 }
 [data-modal-contend] {
-  width: 398px;
+  width: 375px;
   height: 610px;
   background-color: var(--white-color);
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%) scale(1);
   transition-duration: 0.5s;
 }
@@ -279,7 +281,7 @@ img {
   padding: 30px 0 0;
 }
 .modal-form {
-  padding: 2px 40px;
+  padding: 2px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -689,7 +691,7 @@ img {
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   transform: translateY(-0.35em);
-  transition: var(--cubic-bezier-transition);
+  transition: 0.1s;
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover-color);
 }
 .subscribe-btn__svg {
@@ -707,6 +709,7 @@ img {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .btn-item {
   background-color: var(--secondary-background-color);
@@ -725,7 +728,10 @@ img {
   transition: var(--cubic-bezier-transition);
 }
 /* About us section */
-
+img {
+  display: block;
+  width: 350px;
+}
 .our-projects-item {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--secondary-border-color);
@@ -783,14 +789,13 @@ img {
   margin-top: -10px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) {
   .section {
     padding: 40px 0;
-    max-width: 1158px;
     margin: 0 auto;
   }
   .container {
-    max-width: 1158px;
+    max-width: 768px;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -907,7 +912,7 @@ img {
     text-decoration: none;
     align-items: center;
     display: flex;
-    gap: 8px;
+    gap: 5px;
   }
   .nav-icon__item {
     width: 12px;
@@ -921,7 +926,9 @@ img {
     text-decoration: underline;
     transition: var(--cubic-bezier-transition);
   }
-
+  br {
+    display: block;
+  }
   /*Main section*/
   /*Hero section*/
   .hero-section .container {
@@ -937,10 +944,7 @@ img {
   }
 
   .hero-section-contend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 118px 150px 164px 150px;
+    padding: 118px 50px 164px 50px;
   }
   .hero-section .hero-section__title {
     margin-bottom: 30px;
@@ -954,19 +958,21 @@ img {
     flex-direction: row;
     justify-content: center;
   }
+  /* .about-us__icon {
+    padding: 25px 60px;
+  } */
   .about-us-section__list li {
-    max-width: 350px;
+    width: 350px;
   }
+
   .team-section__cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
   }
-  .team-section__card {
-    padding: 0 40px;
-  }
+
   .customers-section__icon {
     padding: 16px 60px;
   }
@@ -987,20 +993,21 @@ img {
     color: var(--white-color);
   }
 }
-@media screen and (min-width: 1158px) and (max-width: 1800px) {
+@media screen and (min-width: 1158px) {
   .section {
     padding: 90px 0;
-    max-width: 1200px;
+    max-width: 11580px;
     margin: 0 auto;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
   }
   .mobile-navigation {
     display: none;
   }
+
   .nav-section {
     display: block;
   }
@@ -1009,12 +1016,9 @@ img {
     justify-content: space-between;
     align-items: center;
   }
-  /* .nav-bar {
-    display: flex;
-    text-align: center;
-    margin-left: 0;
-    margin-right: auto;
-  } */
+  .nav-bar {
+    margin-top: 10px;
+  }
   .header__nav-list {
     display: flex;
     flex-direction: row;
@@ -1060,6 +1064,9 @@ img {
   }
   .header__nav-links {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
     gap: 30px;
   }
   .nav-contacts {
@@ -1086,6 +1093,9 @@ img {
     display: flex;
     gap: 8px;
   }
+  .nav-contact__item {
+    margin-top: 0;
+  }
   .nav-icon__item {
     width: 16px;
     height: 16px;
@@ -1111,22 +1121,24 @@ img {
     position: relative;
   }
   .hero-section-contend {
-    display: flex;
     flex-direction: column;
     padding: 200px 0 200px 0;
-    align-items: center;
   }
   .hero-section .hero-section__title {
     text-align: center;
     font-size: 44px;
     line-height: 60px;
-    letter-spacing: 0.06em;
-    margin-bottom: 30px;
   }
 
   [data-modal-contend] {
     width: 528px;
     height: 581px;
+  }
+  .modal-form__svg {
+    top: 21px;
+  }
+  .modal-form {
+    padding: 2px 40px;
   }
   .modal-title br {
     display: none;
@@ -1141,7 +1153,11 @@ img {
   /* about section */
   .about-us-section__list {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
+
   .about-us-section__title {
     text-align: left;
   }
@@ -1149,7 +1165,9 @@ img {
     display: block;
     margin-top: 30px;
   }
-
+  .about-us-section__list li {
+    max-width: 265px;
+  }
   .what-we-do__container {
     display: flex;
     flex-direction: row;
@@ -1160,6 +1178,7 @@ img {
     display: block;
     position: relative;
   }
+
   .img-box__text {
     position: absolute;
     bottom: 0;
@@ -1177,20 +1196,21 @@ img {
   /* our team */
   .team-section__cards {
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
   }
+
   /* Customer section */
   .customers-section__icons {
     flex-direction: row;
     flex-wrap: nowrap;
   }
   .customers-section__icon {
-    padding: 16px 36px;
+    padding: 16px 30px;
   }
   /* footer section */
   .footer-section .container {
     flex-direction: row;
-    gap: 100px;
+    gap: 30px;
   }
   .subscribe-wrapper {
     flex-direction: row;
@@ -1200,7 +1220,7 @@ img {
   }
   .footer-wrapper {
     display: flex;
-    gap: 100px;
+    gap: 70px;
   }
   .find-us__title {
     text-align: left;
